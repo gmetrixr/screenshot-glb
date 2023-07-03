@@ -11,7 +11,7 @@ export async function inputUrls(
 
   return Promise.all(
     inputs.map(async (input) => {
-      if(isAbsoluteURL(input)) {
+      if (isAbsoluteURL(input)) {
         return input;
       }
 
@@ -28,9 +28,9 @@ export async function inputUrls(
 export function isAbsoluteURL(input: string) {
   try {
     new URL(input);
-    return true
+    return true;
   } catch (e) {
-    console.log("Not an absolute URL");
+    console.log('Not an absolute URL');
     return false;
   }
 }
