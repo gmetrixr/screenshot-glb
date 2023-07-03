@@ -6,7 +6,7 @@ Easily take screenshots and create thumbnail images for glTF 2.0 Binary (GLB) fi
 
 Use npm to install this tool:
 
-`npm install ---save @shopify/screenshot-glb`
+`npm install ---save @gmetrixr/screenshot-glb`
 
 ## Usage
 
