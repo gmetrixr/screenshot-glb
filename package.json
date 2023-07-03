@@ -1,5 +1,5 @@
 {
-  "name": "@shopify/screenshot-glb",
+  "name": "@gmetrixr/screenshot-glb",
   "version": "1.9.2",
   "publishConfig": {
     "access": "public"
