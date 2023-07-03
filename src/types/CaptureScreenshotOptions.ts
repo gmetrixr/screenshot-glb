@@ -13,4 +13,5 @@ export interface CaptureScreenShotOptions
   quality: number;
   timeout: number;
   formatExtension: string;
+  executablePath?: string
 }

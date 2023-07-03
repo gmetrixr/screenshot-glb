@@ -96,6 +96,12 @@ const argv = yargs(process.argv.slice(2)).options({
     describe:
       'Set <model-viewer> attributes by passing them as url params eg. exposure=2&environment-image=neutral',
   },
+  chrome_exec_path: {
+    type: 'string',
+    alias: 'e',
+    describe:
+      'Set chromium browser exec path, forwarded to puppeteer',
+  },
 }).argv;
 
 (async () => {

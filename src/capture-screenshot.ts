@@ -18,6 +18,7 @@ export async function captureScreenshot(options: CaptureScreenShotOptions) {
     quality,
     devicePixelRatio,
     formatExtension,
+    executablePath
   } = options;
   const headless = !debug;
   const args = [
@@ -34,7 +35,7 @@ export async function captureScreenshot(options: CaptureScreenShotOptions) {
     args.push('--start-maximized');
   }
 
-  const browser = await puppeteer.launch({
+  const puppeteerOptions: Record<string, any> = {
     args,
     defaultViewport: {
       width,
@@ -42,7 +43,13 @@ export async function captureScreenshot(options: CaptureScreenShotOptions) {
       deviceScaleFactor: devicePixelRatio,
     },
     headless,
-  });
+  };
+
+  if(executablePath) {
+    puppeteerOptions.executablePath = executablePath;
+  }
+
+  const browser = await puppeteer.launch(puppeteerOptions);
 
   const browserT1 = performance.now();
   let captureTime = 0;

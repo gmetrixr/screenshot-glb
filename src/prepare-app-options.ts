@@ -23,6 +23,7 @@ export interface Argv {
   model_viewer_path?: string;
   model_viewer_version?: string;
   model_viewer_attributes?: string;
+  chrome_exec_path?: string;
 }
 
 export interface PrepareAppOptionsArgs {
@@ -50,6 +51,7 @@ export async function prepareAppOptions({
     model_viewer_attributes,
     model_viewer_version,
     model_viewer_path,
+    chrome_exec_path
   } = argv;
   const inputUrls = await parseInputUrls(fileHandler, input, localServerPort);
 
@@ -108,5 +110,6 @@ export async function prepareAppOptions({
     debug,
     formatExtension,
     devicePixelRatio: 1,
+    executablePath: chrome_exec_path
   };
 }
