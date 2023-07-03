@@ -11,6 +11,10 @@ export async function inputUrls(
 
   return Promise.all(
     inputs.map(async (input) => {
+      if(isAbsoluteURL(input)) {
+        return input;
+      }
+
       const model3dFileName = await fileHandler.addFile(input);
 
       return getLocalUrl({
@@ -19,4 +23,14 @@ export async function inputUrls(
       });
     }),
   );
+}
+
+export function isAbsoluteURL(input: string) {
+  try {
+    new URL(input);
+    return true
+  } catch (e) {
+    console.log("Not an absolute URL");
+    return false;
+  }
 }

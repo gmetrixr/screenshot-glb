@@ -15,6 +15,7 @@
     "lint:fix": "prettier --write ./src",
     "test": "jest",
     "help": "yarn build && node dist/cli.js --help",
+    "dev-url": "yarn build && node dist/cli.js -i \"https://u.vrgmetri.com/gb-sms-prod-1/media/2021-1/gmetri/8fc4c0a1-8d88-4e54-9690-18fd74499e4f/gltf/scene.gltf\" -o output.jpg -w 512 -h 512 -q 1.00 -v -t 30000 -e /usr/bin/google-chrome",
     "dev-chrome": "yarn build && node dist/cli.js -i ./test/fixtures/WaterBottle.glb -o output.jpg -w 1024 -h 2048 -q 1.00 -v -t 30000 -e /usr/bin/google-chrome -m \"exposure=0.92&camera-orbit=88.59deg 59.01deg 0.24m&camera-target=0.06m 0.04m 0m&environment-image=neutral\"",
     "dev": "yarn build && node dist/cli.js -i ./test/fixtures/WaterBottle.glb -o output.jpg -w 1024 -h 2048 -q 1.00 -v -t 30000 -m \"exposure=0.92&camera-orbit=88.59deg 59.01deg 0.24m&camera-target=0.06m 0.04m 0m&environment-image=neutral\"",
     "dev:version": "yarn build && node dist/cli.js -i ./test/fixtures/WaterBottle.glb -o output.jpg -@ 1.9 -w 1024 -h 2048 -q 1.00 -v -t 30000 -m \"exposure=0.92&camera-orbit=88.59deg 59.01deg 0.24m&camera-target=0.06m 0.04m 0m&environment-image=neutral\"",
