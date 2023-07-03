@@ -51,7 +51,7 @@ export async function prepareAppOptions({
     model_viewer_attributes,
     model_viewer_version,
     model_viewer_path,
-    chrome_exec_path
+    chrome_exec_path,
   } = argv;
   const inputUrls = await parseInputUrls(fileHandler, input, localServerPort);
 
@@ -110,6 +110,6 @@ export async function prepareAppOptions({
     debug,
     formatExtension,
     devicePixelRatio: 1,
-    executablePath: chrome_exec_path
+    executablePath: chrome_exec_path,
   };
 }

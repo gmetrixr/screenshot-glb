@@ -18,7 +18,7 @@ export async function captureScreenshot(options: CaptureScreenShotOptions) {
     quality,
     devicePixelRatio,
     formatExtension,
-    executablePath
+    executablePath,
   } = options;
   const headless = !debug;
   const args = [
@@ -45,7 +45,7 @@ export async function captureScreenshot(options: CaptureScreenShotOptions) {
     headless,
   };
 
-  if(executablePath) {
+  if (executablePath) {
     puppeteerOptions.executablePath = executablePath;
   }
 

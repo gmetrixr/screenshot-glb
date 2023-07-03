@@ -99,8 +99,7 @@ const argv = yargs(process.argv.slice(2)).options({
   chrome_exec_path: {
     type: 'string',
     alias: 'e',
-    describe:
-      'Set chromium browser exec path, forwarded to puppeteer',
+    describe: 'Set chromium browser exec path, forwarded to puppeteer',
   },
 }).argv;
 
