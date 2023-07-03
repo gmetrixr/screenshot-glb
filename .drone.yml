@@ -12,7 +12,7 @@ steps:
   commands:
 # Substitution: parameter//substring/replacemenet. So "// \/ / -" means replace / with -
   - echo "The image tag is ${DRONE_BRANCH//\//-}-${DRONE_COMMIT_SHA:0:8}"
-#  - sudo chown -R node .
+  - sudo chown -R node .
   - yarn install
 
 - name: lint-and-build
