@@ -84,7 +84,7 @@ export async function renderScreenshot({
       //   },
       //   {once: true},
       // );
-      if(modelViewer) {
+      if (modelViewer) {
         clearTimeout(timeout);
         resolve();
       }

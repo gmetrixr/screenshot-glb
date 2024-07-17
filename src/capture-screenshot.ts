@@ -27,7 +27,7 @@ export async function captureScreenshot(options: CaptureScreenShotOptions) {
     '--disable-dev-shm-usage',
     '--disable-setuid-sandbox',
     '--no-zygote',
-    '--disable-web-security'
+    '--disable-web-security',
   ];
 
   if (headless) {
