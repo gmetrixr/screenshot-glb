@@ -1,6 +1,7 @@
 export function getModelViewerUrl(version?: string) {
   if (!version) {
-    return 'https://cdn.shopify.com/shopifycloud/model-viewer/model-viewer.js';
+    return 'https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js';
+    // return 'https://cdn.shopify.com/shopifycloud/model-viewer/model-viewer.js';
   }
 
   const regexGetVersion = /(\d+\.\d+)(\.\d+)?/;
@@ -14,6 +15,5 @@ export function getModelViewerUrl(version?: string) {
   }
 
   const majorMinor = result[1];
-
-  return `https://cdn.shopify.com/shopifycloud/model-viewer/v${majorMinor}/model-viewer.js`;
+  return `https://ajax.googleapis.com/ajax/libs/model-viewer/${majorMinor}/model-viewer.min.js`;
 }

@@ -123,6 +123,7 @@ const argv = yargs(process.argv.slice(2)).options({
       localServerPort: localServer.port,
       fileHandler,
       argv,
+      debug: !!(argv.debug || argv.d)
     });
   } catch (error) {
     logError(error);

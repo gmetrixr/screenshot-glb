@@ -67,22 +67,27 @@ export async function renderScreenshot({
       }
 
       const modelViewer = document.getElementById('snapshot-viewer');
-      modelViewer.addEventListener(
-        'poster-dismissed',
-        () => {
-          requestAnimationFrame(() => {
-            requestAnimationFrame(() => {
-              requestAnimationFrame(() => {
-                if (maxTimeInSec > 0) {
-                  clearTimeout(timeout);
-                }
-                resolve();
-              });
-            });
-          });
-        },
-        {once: true},
-      );
+      // modelViewer.addEventListener(
+      //   'poster-dismissed',
+      //   () => {
+      //     console.log("Poster dismissed");
+      //     requestAnimationFrame(() => {
+      //       requestAnimationFrame(() => {
+      //         requestAnimationFrame(() => {
+      //           if (maxTimeInSec > 0) {
+      //             clearTimeout(timeout);
+      //           }
+      //           resolve();
+      //         });
+      //       });
+      //     });
+      //   },
+      //   {once: true},
+      // );
+      if(modelViewer) {
+        clearTimeout(timeout);
+        resolve();
+      }
     });
 
     try {
