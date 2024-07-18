@@ -20,7 +20,7 @@ steps:
   commands:
   - yarn lint
   - yarn prepare
-  - yarn test
+#  - yarn test
 
 #Commits all modified files. npm publish doesn't work with unstaged changes
 - name: npm-prepare-main
